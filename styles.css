@@ -1,0 +1,134 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 5vh;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar__logo {
+  color: white;
+  font-size: 1.5vw;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 10vh;
+}
+
+.navbar__links {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 100%;
+}
+
+.navbar__links:hover {
+  color: #fff;
+  transform: scale(3);
+}
+
+/* Mobile menu icon */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+
+body {
+  background-image: url("shadow4.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  margin: 0;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__links {
+    padding: 15px;
+  }
+}
+
+
+body {
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+/* FIXED IMAGE SECTION (dog stays in place) */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: url("shadow4.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+/* TITLE ON IMAGE */
+.hero-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 10vw;
+  text-align: center;
+
+  text-shadow: 20px 20px 10px black;
+}
+
+/* SCROLLING TEXT AREA */
+.content {
+  margin-top: 100vh; /* pushes text below image */
+  background: black;
+  color: white;
+  padding: 50px;
+}
